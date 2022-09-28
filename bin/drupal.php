@@ -21,7 +21,7 @@ if (file_exists(__DIR__ . '/../autoload.local.php')) {
 } else {
     $autoloaders = [
         __DIR__ . '/../../../autoload.php',
-        __DIR__ . '/../vendor/autoload.php'
+        __DIR__ . '/../vendor/autoload.php',
     ];
 }
 
@@ -38,6 +38,11 @@ if (isset($autoloader)) {
     echo ' You must set up the project dependencies using `composer install`' . PHP_EOL;
     exit(1);
 }
+
+if (file_exists('/var/www/vendor/autoload.php')) {
+    include_once '/var/www/vendor/autoload.php';
+}
+
 
 $output = new ConsoleOutput();
 $input = new ArrayInput([]);
