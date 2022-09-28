@@ -38,3 +38,5 @@ extend.console.*.yml
 
 #PhpStorm
 .idea/*
+/bin/var-dump-server
+drupal

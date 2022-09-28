@@ -1,5 +1,5 @@
 {
-    "name": "drupal/console",
+    "name": "stovak/drupal-console",
     "description": "The Drupal CLI. A tool to generate boilerplate code, interact with and debug Drupal.",
     "keywords": [
         "Drupal",
@@ -63,7 +63,11 @@
     ],
     "config": {
         "bin-dir": "bin/",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/console-extend-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
